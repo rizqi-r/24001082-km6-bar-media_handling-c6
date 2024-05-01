@@ -27,6 +27,7 @@ model Post {
     id          Int    @id @default(autoincrement())
     title       String
     description String
+    photoUrl    String
     User        User?  @relation(fields: [userId], references: [id])
     userId      Int?
 

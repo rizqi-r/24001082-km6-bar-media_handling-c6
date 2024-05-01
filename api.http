@@ -1,0 +1,54 @@
+# # # Auth
+# # Register Auth
+# POST http://localhost:3000/api/v1/register
+# Content-Type: application/json
+
+# {
+#     "name": "lorem",
+#     "email": "loremipsum@dolorsit.amet",
+#     "password": "loremipsum"
+# }
+
+# # Login Auth
+# POST http://localhost:3000/api/v1/login
+# Content-Type: application/json
+
+# {
+#     "email": "loremipsum@dolorsit.amet",
+#     "password": "loremipsum"
+# }
+
+# # Who Am I Auth
+# GET http://localhost:3000/api/v1/whoami
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImxvcmVtIiwiZW1haWwiOiJsb3JlbWlwc3VtQGRvbG9yc2l0LmFtZXQiLCJpYXQiOjE3MTQ1OTk3ODB9.WvXbDMhBXfTYwD8en2HrADtg3iHcnhjFHN2I_cL3mW0
+
+# # # Media
+# # Get All Photo
+# GET http://localhost:3000/api/v1/users/photo
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImxvcmVtIiwiZW1haWwiOiJsb3JlbWlwc3VtQGRvbG9yc2l0LmFtZXQiLCJpYXQiOjE3MTQ1OTk3ODB9.WvXbDMhBXfTYwD8en2HrADtg3iHcnhjFHN2I_cL3mW0
+
+# # Get Photo
+# GET http://localhost:3000/api/v1/users/photo/1
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImxvcmVtIiwiZW1haWwiOiJsb3JlbWlwc3VtQGRvbG9yc2l0LmFtZXQiLCJpYXQiOjE3MTQ1OTk3ODB9.WvXbDMhBXfTYwD8en2HrADtg3iHcnhjFHN2I_cL3mW0
+
+# # Upload Photo [Use Insomnia REST Client!]
+# POST http://localhost:3000/api/v1/users/photo
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImxvcmVtIiwiZW1haWwiOiJsb3JlbWlwc3VtQGRvbG9yc2l0LmFtZXQiLCJpYXQiOjE3MTQ1OTk3ODB9.WvXbDMhBXfTYwD8en2HrADtg3iHcnhjFHN2I_cL3mW0
+# Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+# {
+#    file: file
+#    title: text
+#    description: text
+# }
+
+# # Update Photo [Use Insomnia REST Client!]
+# PUT http://localhost:3000/api/v1/users/photo/1
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImxvcmVtIiwiZW1haWwiOiJsb3JlbWlwc3VtQGRvbG9yc2l0LmFtZXQiLCJpYXQiOjE3MTQ1OTk3ODB9.WvXbDMhBXfTYwD8en2HrADtg3iHcnhjFHN2I_cL3mW0
+# Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+# {
+#    file: file
+#    title: text
+#    description: text
+# }
