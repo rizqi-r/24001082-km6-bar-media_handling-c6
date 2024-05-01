@@ -3,6 +3,11 @@ const prisma = new PrismaClient();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
+/**
+ * @param {import("express").Request} req
+ * @param {import("express").Response} res
+ * @param {import("express").NextFunction} next
+ */
 const register = async (req, res, next) => {
     try {
         const { name, email, password } = req.body;
@@ -45,6 +50,11 @@ const register = async (req, res, next) => {
     }
 };
 
+/**
+ * @param {import("express").Request} req
+ * @param {import("express").Response} res
+ * @param {import("express").NextFunction} next
+ */
 const login = async (req, res, next) => {
     try {
         const { email, password } = req.body;
@@ -86,6 +96,11 @@ const login = async (req, res, next) => {
     }
 };
 
+/**
+ * @param {import("express").Request} req
+ * @param {import("express").Response} res
+ * @param {import("express").NextFunction} next
+ */
 const whoami = async (req, res, next) => {
     try {
         return res.status(200).json({
