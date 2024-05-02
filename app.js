@@ -1,23 +1,14 @@
 require("dotenv").config();
 const express = require("express");
-const session = require("express-session");
 const app = express();
-const cors = require("cors");
 const logger = require("morgan");
 
 const port = 3000;
 const api = require("./routes/api");
 
-app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(logger("dev"));
-
-app.use(session({
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: true
-}));
 
 app.get("/", (req, res, next) => {
     try {
@@ -36,7 +27,7 @@ app.use((req, res, next) => {
     res.status(404).json({ err: `Cannot ${req.method} ${req.url}` });
 });
 
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
     console.log(`running on port ${port}`);
 });
 
