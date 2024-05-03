@@ -12,5 +12,6 @@ router.get("/users/photo", restrict, mediaController.getAllPhoto);
 router.get("/users/photo/:id", restrict, mediaController.getPhoto);
 router.post("/users/photo", restrict, image.single("file"), mediaController.uploadPhoto);
 router.put("/users/photo/:id", restrict, image.single("file"), mediaController.updatePhoto);
+router.delete("/users/photo/:id", restrict, mediaController.deletePhoto);
 
 module.exports = router;
