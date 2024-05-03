@@ -1,6 +1,6 @@
 # # # Auth
 # # Register Auth
-# POST http://localhost:3000/api/v1/register
+# POST https://km6-media-handling-rfn-production.up.railway.app/api/v1/register
 # Content-Type: application/json
 
 # {
@@ -10,7 +10,7 @@
 # }
 
 # # Login Auth
-# POST http://localhost:3000/api/v1/login
+# POST https://km6-media-handling-rfn-production.up.railway.app/api/v1/login
 # Content-Type: application/json
 
 # {
@@ -19,36 +19,58 @@
 # }
 
 # # Who Am I Auth
-# GET http://localhost:3000/api/v1/whoami
-# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImxvcmVtIiwiZW1haWwiOiJsb3JlbWlwc3VtQGRvbG9yc2l0LmFtZXQiLCJpYXQiOjE3MTQ1OTk3ODB9.WvXbDMhBXfTYwD8en2HrADtg3iHcnhjFHN2I_cL3mW0
+# GET https://km6-media-handling-rfn-production.up.railway.app/api/v1/whoami
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImxvcmVtIiwiZW1haWwiOiJsb3JlbWlwc3VtQGRvbG9yc2l0LmFtZXQiLCJpYXQiOjE3MTQ2ODc4MzB9.Dq2jqZCB9TFZl0zmJjRYmJZ0gfzCAddklWhRGSsg3WI
 
 # # # Media
 # # Get All Photo
-# GET http://localhost:3000/api/v1/users/photo
-# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImxvcmVtIiwiZW1haWwiOiJsb3JlbWlwc3VtQGRvbG9yc2l0LmFtZXQiLCJpYXQiOjE3MTQ1OTk3ODB9.WvXbDMhBXfTYwD8en2HrADtg3iHcnhjFHN2I_cL3mW0
+# GET https://km6-media-handling-rfn-production.up.railway.app/api/v1/users/photo
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImxvcmVtIiwiZW1haWwiOiJsb3JlbWlwc3VtQGRvbG9yc2l0LmFtZXQiLCJpYXQiOjE3MTQ2ODc4MzB9.Dq2jqZCB9TFZl0zmJjRYmJZ0gfzCAddklWhRGSsg3WI
 
 # # Get Photo
-# GET http://localhost:3000/api/v1/users/photo/1
-# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImxvcmVtIiwiZW1haWwiOiJsb3JlbWlwc3VtQGRvbG9yc2l0LmFtZXQiLCJpYXQiOjE3MTQ1OTk3ODB9.WvXbDMhBXfTYwD8en2HrADtg3iHcnhjFHN2I_cL3mW0
+# GET https://km6-media-handling-rfn-production.up.railway.app/api/v1/users/photo/1
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImxvcmVtIiwiZW1haWwiOiJsb3JlbWlwc3VtQGRvbG9yc2l0LmFtZXQiLCJpYXQiOjE3MTQ2ODc4MzB9.Dq2jqZCB9TFZl0zmJjRYmJZ0gfzCAddklWhRGSsg3WI
 
 # # Upload Photo [Use Insomnia REST Client!]
-# POST http://localhost:3000/api/v1/users/photo
-# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImxvcmVtIiwiZW1haWwiOiJsb3JlbWlwc3VtQGRvbG9yc2l0LmFtZXQiLCJpYXQiOjE3MTQ1OTk3ODB9.WvXbDMhBXfTYwD8en2HrADtg3iHcnhjFHN2I_cL3mW0
+# POST https://km6-media-handling-rfn-production.up.railway.app/api/v1/users/photo
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImxvcmVtIiwiZW1haWwiOiJsb3JlbWlwc3VtQGRvbG9yc2l0LmFtZXQiLCJpYXQiOjE3MTQ2ODc4MzB9.Dq2jqZCB9TFZl0zmJjRYmJZ0gfzCAddklWhRGSsg3WI
 # Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
-# {
-#    file: file
-#    title: text
-#    description: text
-# }
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW
+# Content-Disposition: form-data; name="file"; filename="sample.png"
+# Content-Type: image/png
+
+# < ./sample.png
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW
+# Content-Disposition: form-data; name="title"
+
+# wallpaper windows 7 baru saya
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW
+# Content-Disposition: form-data; name="description"
+
+# ini wallpaper windows saya
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW--
 
 # # Update Photo [Use Insomnia REST Client!]
-# PUT http://localhost:3000/api/v1/users/photo/1
-# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImxvcmVtIiwiZW1haWwiOiJsb3JlbWlwc3VtQGRvbG9yc2l0LmFtZXQiLCJpYXQiOjE3MTQ1OTk3ODB9.WvXbDMhBXfTYwD8en2HrADtg3iHcnhjFHN2I_cL3mW0
+# PUT https://km6-media-handling-rfn-production.up.railway.app/api/v1/users/photo/1
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImxvcmVtIiwiZW1haWwiOiJsb3JlbWlwc3VtQGRvbG9yc2l0LmFtZXQiLCJpYXQiOjE3MTQ2ODc4MzB9.Dq2jqZCB9TFZl0zmJjRYmJZ0gfzCAddklWhRGSsg3WI
 # Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
-# {
-#    file: file
-#    title: text
-#    description: text
-# }
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW
+# Content-Disposition: form-data; name="file"; filename="sample.png"
+# Content-Type: image/png
+
+# < ./sample.png
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW
+# Content-Disposition: form-data; name="title"
+
+# ubah title
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW
+# Content-Disposition: form-data; name="description"
+
+# ubah description
+# ------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+# # DELETE Photo
+# DELETE https://km6-media-handling-rfn-production.up.railway.app/api/v1/users/photo/1
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6ImxvcmVtIiwiZW1haWwiOiJsb3JlbWlwc3VtQGRvbG9yc2l0LmFtZXQiLCJpYXQiOjE3MTQ2ODc4MzB9.Dq2jqZCB9TFZl0zmJjRYmJZ0gfzCAddklWhRGSsg3WI
